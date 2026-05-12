@@ -1,0 +1,17 @@
+Options -Indexes
+Options +FollowSymLinks
+
+# Protect sensitive files
+<Files "*.sql">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files "*.md">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# PHP settings
+php_value session.cookie_httponly 1
+php_value session.use_strict_mode 1
